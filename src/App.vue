@@ -1,19 +1,19 @@
 <template>
   <v-app class="animate__animated animate__fadeIn animate__slow">
     <v-app-bar class="app-bar" fixed flat app height="80" dark>
-      <span class="font-2">Martelozzo Móveis</span>
+      <span class="text-h3">Martelozzo Móveis</span>
       <v-spacer />
       <div class="d-flex align-center">
         <v-btn
           style="text-transform: none"
-          class="font-7 white--text"
+          class="white--text"
           plain
           href="#inicio"
           >Inicio</v-btn
         >
         <v-btn
           style="text-transform: none"
-          class="font-7 white--text"
+          class="white--text"
           plain
           href="#portfolio"
           >Portfolio</v-btn
@@ -21,7 +21,7 @@
         <v-btn
           style="text-transform: none"
           large
-          class="font-7 brown white--text"
+          class="brown white--text"
           href="#contato"
           >Contato</v-btn
         >
@@ -35,12 +35,10 @@
     <v-footer class="bg-1">
       <v-container>
         <div class="d-sm-none d-md-flex">
-          <v-row no-gutters style="" class="footer d-none d-sm-flex">
-            <p class="font-7">
-              © 2023 Martelozzo Imóveis
-              <br />Desenvolvido por Maniva Software
-            </p>
-          </v-row>
+          <p>
+            © 2023 Martelozzo Imóveis
+            <br />Desenvolvido por Maniva Software
+          </p>
         </div>
       </v-container>
     </v-footer>
