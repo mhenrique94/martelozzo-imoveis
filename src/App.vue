@@ -25,6 +25,13 @@
           href="#contato"
           >Contato</v-btn
         >
+        <v-btn
+          style="text-transform: none"
+          large
+          class="brown white--text"
+          href="#who-we-are"
+          >Quem somos</v-btn
+        >
       </div>
       <v-app-bar-nav-icon class="d-flex d-sm-none" />
     </v-app-bar>

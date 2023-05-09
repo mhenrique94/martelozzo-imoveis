@@ -3,6 +3,7 @@
     <hero />
     <portfolio />
     <contato />
+    <quemSomos />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import hero from "../components/Home/hero-section.vue";
 import portfolio from "../components/Home/portfolio-section.vue";
 import contato from "../components/Home/contato-section.vue";
+import quemSomos from "../components/Home/who-whe-are-section.vue";
 
 export default {
   name: "HomePage",
@@ -18,6 +20,7 @@ export default {
     hero,
     portfolio,
     contato,
+    quemSomos,
   },
 };
 </script>
