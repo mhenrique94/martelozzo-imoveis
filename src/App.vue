@@ -1,7 +1,7 @@
 <template>
   <v-app class="animate__animated animate__fadeIn animate__slow">
     <v-app-bar class="app-bar" fixed flat app height="80" dark>
-      <span class="text-h3">Martelozzo Móveis</span>
+      <span class="text-h3 pa-4 logotipo">Martelozzo</span>
       <v-spacer />
       <div class="d-flex align-center">
         <v-btn
@@ -72,6 +72,12 @@ export default {
 };
 </script>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+.logotipo {
+  font-family: "Raleway", sans-serif;
+}
+
 .app-bar {
   backdrop-filter: blur(5px);
   width: 100%;

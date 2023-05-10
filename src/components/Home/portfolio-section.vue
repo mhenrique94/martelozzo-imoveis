@@ -1,7 +1,7 @@
 <template>
   <v-container class="full-height" id="portfolio">
     <h2 class="text-h2 mb-10">Portfolio</h2>
-    <v-carousel>
+    <v-carousel show-arrows="hover" cycle hide-delimiters>
       <v-carousel-item
         src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         cover

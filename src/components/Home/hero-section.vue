@@ -3,9 +3,11 @@
     <v-row align="center" justify="center" class="hero" no-gutters>
       <v-col cols="12" xl="2" lg="2" />
       <v-col cols="12" xl="8" lg="8">
-        <v-container class="hero-container white--text full-height">
+        <v-container class="hero-container full-height logotipo">
           <h1 class="text-h2 bg-brown pa-3">Martelozzo Móveis Planejados</h1>
-          <p class="text-h3">Transformando seu espaço, uma peça de cada vez</p>
+          <p class="text-h3 text-white copacity">
+            Transformando seu espaço, uma peça de cada vez
+          </p>
         </v-container>
       </v-col>
       <v-col cols="12" xl="2" lg="2" />
@@ -20,6 +22,12 @@ export default {
 };
 </script>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+.logotipo {
+  font-family: "Raleway", sans-serif;
+}
+
 .hero {
   background: url("../../assets/images/hero.jpg");
   background-size: cover;
@@ -36,6 +44,10 @@ export default {
 
 .bg-brown {
   background-color: #795548;
+}
+
+.copacity {
+  backdrop-filter: blur(5px);
 }
 
 @media screen and (max-width: 600px) {
