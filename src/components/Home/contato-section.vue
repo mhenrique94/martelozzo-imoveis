@@ -4,6 +4,7 @@
     <div class="contact-container">
       <div class="cc-inputs">
         <div class="cc-content">
+          Preencha e entraremos em contato!
           <v-form v-model="valid">
             <v-container class="form">
               <v-text-field v-model="name" label="Nome" required></v-text-field>
@@ -74,6 +75,7 @@ export default {
   flex-direction: row;
   min-height: 40vh;
   border-radius: 8px;
+  justify-content: center;
 }
 
 .contact-bg {
