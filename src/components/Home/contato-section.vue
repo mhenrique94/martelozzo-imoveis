@@ -18,18 +18,27 @@
                 label="E-mail"
                 required
               ></v-text-field>
+              <v-btn block color="brown">Enviar</v-btn>
             </v-container>
           </v-form>
         </div>
       </div>
       <div class="cc-address">
-        <div class="cc-content">
-          <p>
-            Endereço
-            <br />Votorantim, SP,
-            <br />
-          </p>
-          <p>Telefone <br />(15) 98163-0646</p>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              class="gmap_iframe"
+              width="100%"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Marcenaria Martelozzo&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe
+            ><a href="https://embed-googlemap.com"
+              >google maps code generator</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -76,6 +85,7 @@ export default {
   background-color: whitesmoke;
   width: 100%;
   padding: 24px;
+  max-width: 400px;
 }
 
 .cc-content {
@@ -85,12 +95,19 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-
-.cc-address {
-  background-color: brown;
-  width: 80%;
-  padding: 24px;
-  background: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
-  background-size: cover;
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  height: 400px;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 400px;
+}
+.gmap_iframe {
+  height: 400px !important;
 }
 </style>
