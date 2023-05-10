@@ -46,7 +46,7 @@
       <v-card class="tall">
         <v-img
           cover
-          src="https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.pexels.com/photos/3190541/pexels-photo-3190541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
       </v-card>
       <v-card class="gw-card">
