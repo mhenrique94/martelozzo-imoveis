@@ -41,7 +41,8 @@
     </v-main>
     <v-footer class="bg-1">
       <v-container>
-        <div>
+        <hr />
+        <div class="mt-6">
           <p>
             © 2023 Martelozzo Imóveis
             <br />Desenvolvido por Maniva Software
