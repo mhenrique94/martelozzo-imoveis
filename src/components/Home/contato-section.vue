@@ -1,5 +1,5 @@
 <template>
-  <div class="full-height contact-bg pa-10" id="contato">
+  <div class="full-height contact-bg" id="contato">
     <h2 class="text-h2 mb-10">Contato</h2>
     <div class="contact-container">
       <div class="cc-inputs">
@@ -29,12 +29,11 @@
           <div class="gmap_canvas">
             <iframe
               class="gmap_iframe"
-              width="100%"
               frameborder="0"
               scrolling="no"
               marginheight="0"
               marginwidth="0"
-              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Marcenaria Martelozzo&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?hl=en&amp;q=Marcenaria Martelozzo&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe
             ><a href="https://embed-googlemap.com"
               >google maps code generator</a
@@ -81,6 +80,7 @@ export default {
 .contact-bg {
   background: url("https://images.unsplash.com/photo-1582913130063-8318329a94a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
   background-size: cover;
+  padding: 80px;
 }
 
 .cc-inputs {
@@ -101,15 +101,46 @@ export default {
   position: relative;
   text-align: right;
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
+
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 .gmap_iframe {
-  height: 400px !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 600px) {
+  .cc-address {
+    height: auto !important;
+  }
+
+  .contact-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-bg {
+    padding: 16px;
+  }
+  .cc-inputs {
+    max-width: 100%;
+  }
+
+  .cc-address {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-bg {
+    justify-content: flex-start;
+    padding-top: 96px;
+  }
 }
 </style>

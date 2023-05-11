@@ -19,3 +19,8 @@
     </v-carousel>
   </v-container>
 </template>
+<style>
+#portfolio {
+  max-width: 1000px;
+}
+</style>

@@ -39,6 +39,7 @@
     <v-main>
       <router-view />
     </v-main>
+
     <v-footer class="bg-1">
       <v-container>
         <hr />

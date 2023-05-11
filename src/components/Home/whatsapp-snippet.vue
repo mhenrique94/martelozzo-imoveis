@@ -1,7 +1,7 @@
 <template>
   <div class="wa-icon">
     <a href="https://api.whatsapp.com/send?phone=5515981630646&text=Ol%C3%A1!">
-      <v-icon icon="mdi-whatsapp" size="72"></v-icon>
+      <v-icon color="green" icon="mdi-whatsapp" size="72"></v-icon>
     </a>
   </div>
 </template>
@@ -18,6 +18,6 @@ a:visited,
 a:active,
 a:link {
   text-decoration: none !important;
-  text-decoration-color: #25d366;
+  text-decoration-color: #25d366 !important;
 }
 </style>

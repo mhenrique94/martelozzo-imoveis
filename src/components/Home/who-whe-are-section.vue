@@ -88,6 +88,9 @@
   </v-container>
 </template>
 <style scoped>
+#who-we-are {
+  max-width: 1000px;
+}
 .main {
   justify-content: space-evenly;
   padding-top: 80px;
@@ -104,11 +107,13 @@
 .gw-card {
   padding: 16px;
 }
+
 .grid-wrapper > gw-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .grid-wrapper > gw-card > gwc-content {
   border-radius: 5px;
 }
@@ -121,14 +126,31 @@
   grid-auto-flow: dense;
   margin-top: 80px;
 }
+
 .grid-wrapper .wide {
   grid-column: span 2;
 }
+
 .grid-wrapper .tall {
   grid-row: span 2;
 }
+
 .grid-wrapper .big {
   grid-column: span 2;
   grid-row: span 2;
+}
+@media (max-width: 400px) {
+  .wide {
+    display: none;
+  }
+  .image-content {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .v-img {
+    position: static;
+  }
 }
 </style>
