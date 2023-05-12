@@ -6,7 +6,8 @@
         <v-container class="hero-container full-height logotipo">
           <h1 class="text-h2 bg-brown pa-3">Martelozzo Móveis Planejados</h1>
           <p class="text-h3 text-white copacity">
-            Transformando seu espaço, uma peça de cada vez
+            <!-- Transformando seu espaço, uma peça de cada vez -->
+            Você sonha, nós construímos
           </p>
         </v-container>
       </v-col>

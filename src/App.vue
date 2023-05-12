@@ -94,4 +94,10 @@ export default {
 .footer {
   padding: 4%;
 }
+
+@media (max-width: 600px) {
+  .app-bar {
+    height: 64px;
+  }
+}
 </style>

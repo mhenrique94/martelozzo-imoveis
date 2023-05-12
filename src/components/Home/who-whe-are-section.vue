@@ -139,7 +139,7 @@
   grid-column: span 2;
   grid-row: span 2;
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .wide {
     display: none;
   }
