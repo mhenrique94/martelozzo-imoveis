@@ -1,7 +1,7 @@
 <template>
   <div class="wa-icon">
     <a href="https://api.whatsapp.com/send?phone=5515981630646&text=Ol%C3%A1!">
-      <v-icon color="green" icon="mdi-whatsapp" size="72"></v-icon>
+      <v-icon color="green" icon="mdi-whatsapp" size="56"></v-icon>
     </a>
   </div>
 </template>
@@ -11,6 +11,7 @@
   border-radius: 50%;
   padding: 8px;
   color: #25d366;
+  z-index: 2000;
 }
 
 a,

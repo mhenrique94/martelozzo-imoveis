@@ -87,6 +87,7 @@ export default {
   background-color: whitesmoke;
   width: 100%;
   padding: 16px;
+  max-width: 400px;
 }
 
 .cc-content {
