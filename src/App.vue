@@ -1,41 +1,6 @@
 <template>
   <v-app class="animate__animated animate__fadeIn animate__slow">
-    <v-app-bar class="app-bar" fixed flat app height="80" dark>
-      <span class="text-h3 pa-4 logotipo">Martelozzo</span>
-      <v-spacer />
-      <div class="d-flex align-center">
-        <v-btn
-          style="text-transform: none"
-          class="white--text"
-          plain
-          href="#inicio"
-          >Inicio</v-btn
-        >
-        <v-btn
-          style="text-transform: none"
-          class="white--text"
-          plain
-          href="#portfolio"
-          >Portfolio</v-btn
-        >
-        <v-btn
-          style="text-transform: none"
-          large
-          class="brown white--text"
-          href="#contato"
-          >Contato</v-btn
-        >
-        <v-btn
-          style="text-transform: none"
-          large
-          class="brown white--text"
-          href="#who-we-are"
-          >Quem somos</v-btn
-        >
-      </div>
-      <v-app-bar-nav-icon class="d-flex d-sm-none" />
-    </v-app-bar>
-
+    <navigation-bar class="navigation-bar" />
     <v-main>
       <router-view />
     </v-main>
@@ -55,7 +20,9 @@
 </template>
 
 <script>
+import navigationBar from "./components/navigation-bar.vue";
 export default {
+  components: { navigationBar },
   name: "App",
   data() {
     return {
@@ -79,11 +46,6 @@ export default {
   font-family: "Raleway", sans-serif;
 }
 
-.app-bar {
-  backdrop-filter: blur(5px);
-  width: 100%;
-}
-
 .full-height {
   height: 100vh;
   display: flex;
@@ -95,9 +57,7 @@ export default {
   padding: 4%;
 }
 
-@media (max-width: 600px) {
-  .app-bar {
-    height: 64px;
-  }
+.navigation-bar {
+  z-index: 2000;
 }
 </style>
