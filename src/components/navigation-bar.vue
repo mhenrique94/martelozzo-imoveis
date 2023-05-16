@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <span class="text-h3 pa-4 logotipo">Martelozzo</span>
+  <div class="main-navbar">
+    <span class="text-h3 pl-4 logotipo">Martelozzo</span>
     <input type="checkbox" id="hamburger-input" class="burger-shower" />
     <label id="hamburger-menu" for="hamburger-input">
       <nav id="sidebar-menu">
@@ -21,13 +21,13 @@
 </template>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
-
-body {
-  padding: 0px;
-  margin: 0px;
-  font-size: 20px;
-  min-height: 200vh;
-  font-family: "Cabin", Sans-serif;
+.main-navbar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
 }
 
 .overlay {
