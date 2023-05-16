@@ -1,6 +1,18 @@
 <template>
   <div class="main-navbar">
     <span class="text-h3 pl-4 logotipo">Martelozzo</span>
+    <nav id="main-menu">
+      <ul class="mm-items">
+        <li class="white--text">
+          <a href="#inicio">Inicio</a>
+        </li>
+        <li class="white--text"><a href="#portfolio"> Portfolio</a></li>
+        <li class="brown white--text"><a href="#contato">Contato</a></li>
+        <li class="brown white--text">
+          <a href="#who-we-are">Quem somos</a>
+        </li>
+      </ul>
+    </nav>
     <input type="checkbox" id="hamburger-input" class="burger-shower" />
     <label id="hamburger-menu" for="hamburger-input">
       <nav id="sidebar-menu">
@@ -30,6 +42,41 @@
   align-items: center;
 }
 
+#main-menu > .mm-items {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+  padding: 0 16px;
+  list-style-type: none;
+}
+
+#main-menu > .mm-items > li {
+  text-decoration: none;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  color: #100f0f;
+  background-color: white;
+  padding: 8px;
+}
+
+#main-menu > .mm-items > li:hover {
+  color: white;
+  background-color: #795548;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -42,40 +89,6 @@
   overflow: hidden;
   background: black;
   z-index: -1;
-}
-
-#main-menu {
-  display: block;
-  height: 100px;
-  width: 100%;
-  margin: 0px;
-  z-index: 9;
-}
-
-#main-menu ul {
-  max-width: 800px;
-  width: 100%;
-  height: 100%;
-  margin: 0px auto;
-  padding: 0px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 9;
-}
-
-#main-menu li {
-  list-style-type: none;
-  font-size: 2rem;
-}
-
-#main-menu a {
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-#main-menu a:hover {
-  text-decoration: underline;
 }
 
 #hamburger-input {
@@ -159,6 +172,7 @@
   #main-menu {
     display: none;
   }
+
   #hamburger-menu {
     display: inline;
   }
