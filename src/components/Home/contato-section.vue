@@ -80,14 +80,13 @@ export default {
 .contact-bg {
   background: url("https://images.unsplash.com/photo-1582913130063-8318329a94a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
   background-size: cover;
-  padding: 80px;
+  padding: 16px;
 }
 
 .cc-inputs {
   background-color: whitesmoke;
   width: 100%;
-  padding: 24px;
-  max-width: 400px;
+  padding: 16px;
 }
 
 .cc-content {
@@ -126,9 +125,6 @@ export default {
 }
 
 @media (max-width: 800px) {
-  .contact-bg {
-    padding: 16px;
-  }
   .cc-inputs {
     max-width: 100%;
   }
@@ -139,8 +135,8 @@ export default {
   }
 
   .contact-bg {
-    justify-content: flex-start;
-    padding-top: 96px;
+    padding: 16px;
+    justify-content: center;
   }
 }
 </style>
