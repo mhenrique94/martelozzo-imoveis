@@ -5,21 +5,50 @@
       <div class="cc-inputs">
         <div class="cc-content">
           Preencha e entraremos em contato!
-          <v-form v-model="valid">
+          <v-form
+            v-model="valid"
+            action="https://formsubmit.co/contato@martelozzo.com.br"
+            method="POST"
+          >
             <v-container class="form">
-              <v-text-field v-model="name" label="Nome" required></v-text-field>
+              <input
+                type="hidden"
+                name="_next"
+                value="https://www.martelozzo.com.br"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Solicitação de contato"
+              />
+              <input type="hidden" name="_captcha" value="false" />
               <v-text-field
+                v-model="name"
+                label="Nome"
+                name="email"
+                required
+              ></v-text-field>
+              <v-text-field
+                name="email"
                 v-model="phone"
                 label="Celular"
                 required
               ></v-text-field>
               <v-text-field
+                name="email"
                 v-model="email"
                 :rules="emailRules"
                 label="E-mail"
                 required
               ></v-text-field>
-              <v-btn block color="brown">Enviar</v-btn>
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Recebemos seu contato! A Marcenaria Martelozzo agradece!"
+              />
+              <v-btn block color="brown" name="email" type="submit"
+                >Enviar</v-btn
+              >
             </v-container>
           </v-form>
         </div>
@@ -56,14 +85,17 @@ export default {
       (value) => {
         if (value) return true;
 
-        return "E-mail is requred.";
+        return "Campo obrigatório!.";
       },
       (value) => {
         if (/.+@.+\..+/.test(value)) return true;
 
-        return "E-mail must be valid.";
+        return "E-mail tem que ser válido.";
       },
     ],
+    rules: {
+      required: (value) => !!value || "Campo obrigatório!",
+    },
   }),
 };
 </script>
