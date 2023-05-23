@@ -3,12 +3,14 @@
     <v-container>
       <hr />
       <div class="d-flex mt-6 justify-space-between">
-        <p>
-          © 2023 Marcenaria Martelozzo Móveis Planejados
-          <br /><a href="https://manivasoft.com">
-            Desenvolvido por Maniva Software
-          </a>
-        </p>
+        <div>
+          <p class="mb-2">© 2023 Marcenaria Martelozzo Móveis Planejados</p>
+          <p class="text-subtitle-2">
+            <a href="https://manivasoft.com">
+              Desenvolvido por Maniva Software
+            </a>
+          </p>
+        </div>
         <div class="apps">
           <a
             href="https://api.whatsapp.com/send?phone=5515981630646&text=Ol%C3%A1!"
