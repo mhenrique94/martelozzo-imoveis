@@ -45,6 +45,10 @@ a:visited {
   color: black;
 }
 
+a:hover {
+  color: #795548;
+}
+
 .apps {
   display: flex;
   gap: 8px;
