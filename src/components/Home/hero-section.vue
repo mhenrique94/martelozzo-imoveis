@@ -1,6 +1,18 @@
 <template>
   <div id="inicio">
     <v-row align="center" justify="center" class="hero" no-gutters>
+      <div class="apps">
+        <a
+          href="https://api.whatsapp.com/send?phone=5515981630646&text=Ol%C3%A1!"
+          ><v-icon icon="mdi-whatsapp" size="32"></v-icon
+        ></a>
+        <a href="https://www.facebook.com/Martelozzo"
+          ><v-icon icon="mdi-facebook" size="32"></v-icon
+        ></a>
+        <a href="https://goo.gl/maps/6YaH5mctsMkS67Ct5?coh=178572&entry=tt"
+          ><v-icon icon="mdi-google-maps" size="32"></v-icon
+        ></a>
+      </div>
       <v-col cols="12" xl="2" lg="2" />
       <v-col cols="12" xl="8" lg="8">
         <v-container class="hero-container full-height logotipo">
@@ -22,7 +34,7 @@ export default {
   components: {},
 };
 </script>
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 .logotipo {
@@ -49,6 +61,22 @@ export default {
 
 .copacity {
   backdrop-filter: blur(5px);
+}
+
+.apps {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px;
+}
+
+.apps > a {
+  color: rgb(235, 235, 235);
+}
+
+.apps > a:hover {
+  color: white;
 }
 
 @media screen and (max-width: 600px) {

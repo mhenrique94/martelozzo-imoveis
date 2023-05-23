@@ -31,7 +31,7 @@
     <div class="overlay"></div>
   </div>
 </template>
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
 .main-navbar {
   position: sticky;
@@ -67,6 +67,10 @@
 #main-menu > .mm-items > li:hover {
   color: white;
   background-color: #795548;
+}
+
+a {
+  color: black;
 }
 
 a:visited {

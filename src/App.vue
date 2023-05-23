@@ -4,25 +4,15 @@
     <v-main>
       <router-view />
     </v-main>
-
-    <v-footer class="bg-1">
-      <v-container>
-        <hr />
-        <div class="mt-6">
-          <p>
-            © 2023 Martelozzo Imóveis
-            <br />Desenvolvido por Maniva Software
-          </p>
-        </div>
-      </v-container>
-    </v-footer>
+    <page-footer />
   </v-app>
 </template>
 
 <script>
 import navigationBar from "./components/navigation-bar.vue";
+import pageFooter from "./components/page-footer.vue";
 export default {
-  components: { navigationBar },
+  components: { navigationBar, pageFooter },
   name: "App",
   data() {
     return {
@@ -39,7 +29,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 .logotipo {
@@ -53,11 +43,16 @@ export default {
   justify-content: center;
 }
 
-.footer {
-  padding: 4%;
-}
-
 .navigation-bar {
   z-index: 2000;
+}
+</style>
+
+<style>
+.full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>

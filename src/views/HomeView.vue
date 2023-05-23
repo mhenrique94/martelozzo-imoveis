@@ -31,6 +31,6 @@ export default {
 .whatsapp {
   position: fixed;
   right: 10px;
-  bottom: 20px;
+  bottom: 10%;
 }
 </style>
