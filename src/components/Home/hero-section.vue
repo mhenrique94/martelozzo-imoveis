@@ -1,6 +1,6 @@
 <template>
   <div id="inicio">
-    <v-row align="center" justify="center" class="full-height hero">
+    <div align="center" justify="center" class="full-height hero">
       <v-container class="hero-container logotipo copacity">
         <div class="apps">
           <a
@@ -20,7 +20,7 @@
           Você sonha, nós construímos
         </p>
       </v-container>
-    </v-row>
+    </div>
   </div>
 </template>
 
