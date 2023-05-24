@@ -5,11 +5,7 @@
       <div class="cc-inputs">
         <div class="cc-content">
           Preencha e entraremos em contato!
-          <v-form
-            v-model="valid"
-            action="https://formsubmit.co/contato@martelozzo.com.br"
-            method="POST"
-          >
+          <v-form v-model="valid" @submit.prevent="submitForm">
             <v-container class="form">
               <input
                 type="hidden"
@@ -25,11 +21,11 @@
               <v-text-field
                 v-model="name"
                 label="Nome"
-                name="email"
+                name="fullname"
                 required
               ></v-text-field>
               <v-text-field
-                name="email"
+                name="phone"
                 v-model="phone"
                 label="Celular"
                 required
@@ -39,16 +35,8 @@
                 v-model="email"
                 :rules="emailRules"
                 label="E-mail"
-                required
               ></v-text-field>
-              <input
-                type="hidden"
-                name="_autoresponse"
-                value="Recebemos seu contato! A Marcenaria Martelozzo agradece!"
-              />
-              <v-btn block color="brown" name="email" type="submit"
-                >Enviar</v-btn
-              >
+              <v-btn block color="brown" type="submit">Enviar</v-btn>
             </v-container>
           </v-form>
         </div>
@@ -75,6 +63,7 @@
 </template>
 
 <script>
+import { addDoc, collection, db } from "../../firebase/config";
 export default {
   data: () => ({
     valid: false,
@@ -97,6 +86,26 @@ export default {
       required: (value) => !!value || "Campo obrigatório!",
     },
   }),
+  methods: {
+    async submitForm() {
+      const message = {
+        name: this.name,
+        phone: this.phone,
+        email: this.email,
+      };
+
+      try {
+        const docRef = await addDoc(
+          collection(db, "solicitacoesContato"),
+          message
+        );
+
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    },
+  },
 };
 </script>
 
