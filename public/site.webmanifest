@@ -449,6 +449,34 @@
     {
       "src": "ios/1024.png",
       "sizes": "1024x1024"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/oi1.png",
+      "sizes": "375x840",
+      "type": "image/png",
+      "platform": "narrow ",
+      "label": "Menu mobile"
+    },
+    {
+      "src": "screenshots/oi2.png",
+      "sizes": "375x840",
+      "type": "image/png",
+      "platform": "narrow ",
+      "label": "Seção de contato"
+    },
+    {
+      "src": "screenshots/oi3.png",
+      "sizes": "375x840",
+      "type": "image/png",
+      "platform": "narrow ",
+      "label": "Seção Quem Somos"
     }
   ],
   "theme_color": "#795548",
