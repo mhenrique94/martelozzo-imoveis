@@ -1,23 +1,26 @@
 <template>
   <div class="full-height contact-bg" id="contato">
-    <h2 class="text-h2 mb-10">Contato</h2>
+    <h2 class="text-h2 mb-md-10 mb-sm-2">Contato</h2>
+    <div class="apps copacity">
+      <a href="https://api.whatsapp.com/send?phone=5515981630646&text=Ol%C3%A1!"
+        ><v-icon icon="mdi-whatsapp" size="32"></v-icon
+      ></a>
+      <a href="https://www.facebook.com/Martelozzo"
+        ><v-icon icon="mdi-facebook" size="32"></v-icon
+      ></a>
+      <a href="https://goo.gl/maps/6YaH5mctsMkS67Ct5?coh=178572&entry=tt"
+        ><v-icon icon="mdi-google-maps" size="32"></v-icon
+      ></a>
+      <a href="mailto:contato@martelozzo.com.br"
+        ><v-icon icon="mdi-email-outline" size="32"></v-icon
+      ></a>
+    </div>
     <div class="contact-container">
       <div class="cc-inputs">
         <div class="cc-content" v-if="!emailSent">
           Preencha e entraremos em contato!
           <v-form v-model="valid" @submit.prevent="submitForm">
             <v-container class="form">
-              <input
-                type="hidden"
-                name="_next"
-                value="https://www.martelozzo.com.br"
-              />
-              <input
-                type="hidden"
-                name="_subject"
-                value="Solicitação de contato"
-              />
-              <input type="hidden" name="_captcha" value="false" />
               <v-text-field
                 v-model="name"
                 label="Nome"
@@ -167,7 +170,34 @@ export default {
   height: 100% !important;
 }
 
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #795548;
+}
+
+.apps {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+}
+
+.copacity {
+  backdrop-filter: blur(5px);
+}
+
 @media (max-width: 600px) {
+  h2 {
+    margin-bottom: 16px;
+  }
   .cc-address {
     height: auto !important;
   }

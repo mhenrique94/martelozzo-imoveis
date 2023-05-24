@@ -130,7 +130,7 @@ a:hover {
   top: 0;
   right: 0;
   height: 100%;
-  width: 50%;
+  width: 100%;
   transition: 0.3s;
   padding: 0px 10px;
   box-sizing: border-box;

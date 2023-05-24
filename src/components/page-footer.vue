@@ -22,6 +22,9 @@
           <a href="https://goo.gl/maps/6YaH5mctsMkS67Ct5?coh=178572&entry=tt"
             ><v-icon icon="mdi-google-maps" size="32"></v-icon
           ></a>
+          <a href="mailto:contato@martelozzo.com.br"
+            ><v-icon icon="mdi-email-outline" size="32"></v-icon
+          ></a>
         </div>
       </div>
     </v-container>
