@@ -3,7 +3,7 @@
     <h2 class="text-h2 mb-10">Contato</h2>
     <div class="contact-container">
       <div class="cc-inputs">
-        <div class="cc-content">
+        <div class="cc-content" v-if="!emailSent">
           Preencha e entraremos em contato!
           <v-form v-model="valid" @submit.prevent="submitForm">
             <v-container class="form">
@@ -40,6 +40,9 @@
             </v-container>
           </v-form>
         </div>
+        <div class="email-sent" v-else>
+          Dados enviados! Em breve entraremos em contato.
+        </div>
       </div>
       <div class="cc-address">
         <div class="mapouter">
@@ -70,6 +73,7 @@ export default {
     name: "",
     phone: "",
     email: "",
+    emailSent: null,
     emailRules: [
       (value) => {
         if (value) return true;
@@ -95,14 +99,11 @@ export default {
       };
 
       try {
-        const docRef = await addDoc(
-          collection(db, "solicitacoesContato"),
-          message
-        );
-
-        console.log("Document written with ID: ", docRef.id);
+        await addDoc(collection(db, "solicitacoesContato"), message);
       } catch (e) {
         console.error("Error adding document: ", e);
+      } finally {
+        this.emailSent = true;
       }
     },
   },
@@ -129,6 +130,16 @@ export default {
   width: 100%;
   padding: 16px;
   max-width: 400px;
+}
+
+.email-sent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 18pt;
+  text-align: center;
 }
 
 .cc-content {
